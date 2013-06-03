@@ -1,0 +1,9 @@
+- A gramatica usada para gerar o compilador que usamos eh a java-1.5-customized.sablecc
+- Note que essa versao foi modificada para incluir a instrucao iif
+- Para gerar novamente a versao, basta executar:
+
+  mvn clean
+  
+      ou
+
+  mvn package
