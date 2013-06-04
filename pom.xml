@@ -28,6 +28,7 @@
 
   <modules>
     <module>java-compiler</module>
+    <module>program-diagnosis</module>
   </modules>
 
   <build>

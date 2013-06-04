@@ -1,0 +1,105 @@
+[DEBUG] 24/02/09 03:07:35.000462 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - parsing Maratona 
+[DEBUG] 24/02/09 03:07:35.000542 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - parsing h = readInt ( ) 
+[DEBUG] 24/02/09 03:07:35.000543 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - creating Assignment C0
+[DEBUG] 24/02/09 03:07:35.000594 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - parsing h 
+[DEBUG] 24/02/09 03:07:35.000603 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - parsing readInt ( ) 
+[DEBUG] 24/02/09 03:07:35.000605 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - created connection input0
+[DEBUG] 24/02/09 03:07:35.000624 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - connecting [C0-IN] to input0
+[DEBUG] 24/02/09 03:07:35.000625 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - created connection h0
+[DEBUG] 24/02/09 03:07:35.000626 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - connecting [C0-OUT] to h0
+[DEBUG] 24/02/09 03:07:35.000629 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - parsing m = readInt ( ) 
+[DEBUG] 24/02/09 03:07:35.000629 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - creating Assignment C1
+[DEBUG] 24/02/09 03:07:35.000629 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - parsing m 
+[DEBUG] 24/02/09 03:07:35.000634 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - parsing readInt ( ) 
+[DEBUG] 24/02/09 03:07:35.000635 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - created connection input1
+[DEBUG] 24/02/09 03:07:35.000643 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - connecting [C1-IN] to input1
+[DEBUG] 24/02/09 03:07:35.000649 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - created connection m1
+[DEBUG] 24/02/09 03:07:35.000649 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - connecting [C1-OUT] to m1
+[DEBUG] 24/02/09 03:07:35.000664 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - parsing s = readInt ( ) 
+[DEBUG] 24/02/09 03:07:35.000664 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - creating Assignment C2
+[DEBUG] 24/02/09 03:07:35.000664 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - parsing s 
+[DEBUG] 24/02/09 03:07:35.000678 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - parsing readInt ( ) 
+[DEBUG] 24/02/09 03:07:35.000678 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - created connection input2
+[DEBUG] 24/02/09 03:07:35.000692 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - connecting [C2-IN] to input2
+[DEBUG] 24/02/09 03:07:35.000692 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - created connection s2
+[DEBUG] 24/02/09 03:07:35.000693 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - connecting [C2-OUT] to s2
+[DEBUG] 24/02/09 03:07:35.000723 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - parsing me = readInt ( ) 
+[DEBUG] 24/02/09 03:07:35.000724 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - creating Assignment C3
+[DEBUG] 24/02/09 03:07:35.000724 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - parsing me 
+[DEBUG] 24/02/09 03:07:35.000741 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - parsing readInt ( ) 
+[DEBUG] 24/02/09 03:07:35.000741 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - created connection input3
+[DEBUG] 24/02/09 03:07:35.000757 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - connecting [C3-IN] to input3
+[DEBUG] 24/02/09 03:07:35.000758 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - created connection me3
+[DEBUG] 24/02/09 03:07:35.000758 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - connecting [C3-OUT] to me3
+[DEBUG] 24/02/09 03:07:35.000761 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - parsing kg = readInt ( ) 
+[DEBUG] 24/02/09 03:07:35.000777 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - creating Assignment C4
+[DEBUG] 24/02/09 03:07:35.000778 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - parsing kg 
+[DEBUG] 24/02/09 03:07:35.000781 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - parsing readInt ( ) 
+[DEBUG] 24/02/09 03:07:35.000781 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - created connection input4
+[DEBUG] 24/02/09 03:07:35.000793 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - connecting [C4-IN] to input4
+[DEBUG] 24/02/09 03:07:35.000793 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - created connection kg4
+[DEBUG] 24/02/09 03:07:35.000793 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - connecting [C4-OUT] to kg4
+[DEBUG] 24/02/09 03:07:35.000796 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - parsing t = h * 3600 + m * 600 + s 
+[DEBUG] 24/02/09 03:07:35.000796 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - creating Assignment C5
+[DEBUG] 24/02/09 03:07:35.000805 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - parsing t 
+[DEBUG] 24/02/09 03:07:35.000807 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - parsing h * 3600 + m * 600 + s 
+[DEBUG] 24/02/09 03:07:35.000807 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - creating Adder C6
+[DEBUG] 24/02/09 03:07:35.000818 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - parsing h * 3600 + m * 600 
+[DEBUG] 24/02/09 03:07:35.000818 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - creating Adder C7
+[DEBUG] 24/02/09 03:07:35.000819 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - parsing h * 3600 
+[DEBUG] 24/02/09 03:07:35.000819 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - creating Multiplier C8
+[DEBUG] 24/02/09 03:07:35.000832 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - connecting [C8-IN1] to h0
+[DEBUG] 24/02/09 03:07:35.000832 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - connecting [C8-IN2] to 3600
+[DEBUG] 24/02/09 03:07:35.000833 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - created connection aux8
+[DEBUG] 24/02/09 03:07:35.000849 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - connecting [C8-RESULT] to aux8
+[DEBUG] 24/02/09 03:07:35.000850 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - parsing m * 600 
+[DEBUG] 24/02/09 03:07:35.000850 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - creating Multiplier C9
+[DEBUG] 24/02/09 03:07:35.000853 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - connecting [C9-IN1] to m1
+[DEBUG] 24/02/09 03:07:35.000853 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - connecting [C9-IN2] to 600
+[DEBUG] 24/02/09 03:07:35.000854 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - created connection aux9
+[DEBUG] 24/02/09 03:07:35.000854 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - connecting [C9-RESULT] to aux9
+[DEBUG] 24/02/09 03:07:35.000854 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - connecting [C7-IN1] to aux8
+[DEBUG] 24/02/09 03:07:35.000854 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - connecting [C7-IN2] to aux9
+[DEBUG] 24/02/09 03:07:35.000855 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - created connection aux7
+[DEBUG] 24/02/09 03:07:35.000855 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - connecting [C7-RESULT] to aux7
+[DEBUG] 24/02/09 03:07:35.000855 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - connecting [C6-IN1] to aux7
+[DEBUG] 24/02/09 03:07:35.000855 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - connecting [C6-IN2] to s2
+[DEBUG] 24/02/09 03:07:35.000856 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - created connection aux6
+[DEBUG] 24/02/09 03:07:35.000856 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - connecting [C6-RESULT] to aux6
+[DEBUG] 24/02/09 03:07:35.000872 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - connecting [C5-IN] to aux6
+[DEBUG] 24/02/09 03:07:35.000872 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - created connection t5
+[DEBUG] 24/02/09 03:07:35.000873 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - connecting [C5-OUT] to t5
+[DEBUG] 24/02/09 03:07:35.000885 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - parsing v = me / t 
+[DEBUG] 24/02/09 03:07:35.000885 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - creating Assignment C10
+[DEBUG] 24/02/09 03:07:35.000886 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - parsing v 
+[DEBUG] 24/02/09 03:07:35.000887 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - parsing me / t 
+[DEBUG] 24/02/09 03:07:35.000887 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - creating Divisor C11
+[DEBUG] 24/02/09 03:07:35.000892 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - connecting [C11-IN1] to me3
+[DEBUG] 24/02/09 03:07:35.000892 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - connecting [C11-IN2] to t5
+[DEBUG] 24/02/09 03:07:35.000893 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - created connection aux11
+[DEBUG] 24/02/09 03:07:35.000893 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - connecting [C11-RESULT] to aux11
+[DEBUG] 24/02/09 03:07:35.000895 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - connecting [C10-IN] to aux11
+[DEBUG] 24/02/09 03:07:35.000895 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - created connection v10
+[DEBUG] 24/02/09 03:07:35.000895 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - connecting [C10-OUT] to v10
+[DEBUG] 24/02/09 03:07:35.000902 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - parsing writeInt ( "velocity is: " , v ) 
+[DEBUG] 24/02/09 03:07:35.000902 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - creating Adder C12
+[DEBUG] 24/02/09 03:07:35.000920 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - connecting [C12-IN] to v10
+[DEBUG] 24/02/09 03:07:35.000920 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - created connection output0
+[DEBUG] 24/02/09 03:07:35.000920 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - connecting [C12-OUT] to output0
+[DEBUG] 24/02/09 03:07:35.000922 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - parsing g = kg * 1000 
+[DEBUG] 24/02/09 03:07:35.000922 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - creating Assignment C13
+[DEBUG] 24/02/09 03:07:35.000923 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - parsing g 
+[DEBUG] 24/02/09 03:07:35.000927 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - parsing kg * 1000 
+[DEBUG] 24/02/09 03:07:35.000928 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - creating Multiplier C14
+[DEBUG] 24/02/09 03:07:35.000930 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - connecting [C14-IN1] to kg4
+[DEBUG] 24/02/09 03:07:35.000930 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - connecting [C14-IN2] to 1000
+[DEBUG] 24/02/09 03:07:35.000930 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - created connection aux14
+[DEBUG] 24/02/09 03:07:35.000930 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - connecting [C14-RESULT] to aux14
+[DEBUG] 24/02/09 03:07:35.000941 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - connecting [C13-IN] to aux14
+[DEBUG] 24/02/09 03:07:35.000943 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - created connection g13
+[DEBUG] 24/02/09 03:07:35.000962 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - connecting [C13-OUT] to g13
+[DEBUG] 24/02/09 03:07:35.000973 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - parsing writeInt ( "grams are: " , g ) 
+[DEBUG] 24/02/09 03:07:35.000973 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - creating Adder C15
+[DEBUG] 24/02/09 03:07:35.000990 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - connecting [C15-IN] to g13
+[DEBUG] 24/02/09 03:07:35.000991 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - created connection output1
+[DEBUG] 24/02/09 03:07:35.000991 - org.sablecc.grammars.java_1_5.interpret.MyInterpreter - connecting [C15-OUT] to output1

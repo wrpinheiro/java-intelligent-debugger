@@ -1,0 +1,104 @@
+(IntegerConnection input0 input?0)
+(IntegerConnection input1 input?1)
+(IntegerConnection input2 input?2)
+(IntegerConnection input3 input?3)
+(IntegerConnection input4 input?4)
+
+(IntegerConnection output0 output?0)
+(IntegerConnection output1 output?1)
+
+(IntegerConnection h  h?0)
+(IntegerConnection m  m?0)
+(IntegerConnection s  s?0)
+(IntegerConnection me me?0)
+(IntegerConnection kg kg?0)
+(IntegerConnection t  t?0)
+(IntegerConnection v  v?0)
+(IntegerConnection g  g?0)
+
+(IntegerConnection c3600 CONST3600?0)
+(IntegerConnection c600  CONST600?0)
+(IntegerConnection c1000 CONST1000?0)
+
+(IntegerConnection temp0 TEMP0?0)
+(IntegerConnection temp1 TEMP1?0)
+(IntegerConnection temp2 TEMP2?0)
+(IntegerConnection temp3 TEMP3?0)
+(IntegerConnection temp4 TEMP4?0)
+(IntegerConnection temp5 TEMP5?0)
+
+(IntegerAssignment assignInput0 C?0 35)
+(IntegerAssignment assignInput1 C?1 37)
+(IntegerAssignment assignInput2 C?2 39)
+(IntegerAssignment assignInput3 C?3 41)
+(IntegerAssignment assignInput4 C?4 43)
+
+(IntegerMultiplier m1 C?5 45)
+(IntegerMultiplier m2 C?6 45)
+(IntegerMultiplier m3 C?7 49)
+
+(IntegerAdder a1 C?8 45)
+(IntegerAdder a2 C?9 45)
+
+(IntegerDivision d1 C?10 46)
+
+(IntegerAssignment assign1 C?11 45)
+(IntegerAssignment assign2 C?12 46)
+(IntegerAssignment assign3 C?13 49)
+
+(IntegerAssignment assignOutput0 C?14 47)
+(IntegerAssignment assignOutput1 C?15 50)
+
+(conn input0 (in assignInput0))
+(conn h (out assignInput0))
+
+(conn input1 (in assignInput1))
+(conn m (out assignInput1))
+
+(conn input2 (in assignInput2))
+(conn s (out assignInput2))
+
+(conn input3 (in assignInput3))
+(conn me (out assignInput3))
+
+(conn input4 (in assignInput4))
+(conn kg (out assignInput4))
+
+(conn h (in1 m1))
+(conn c3600 (in2 m1))
+(conn temp0 (result m1))
+
+(conn m (in1 m2))
+(conn c600 (in2 m2))
+(conn temp1 (result m2))
+
+(conn temp0 (in1 a1))
+(conn temp1 (in2 a1))
+(conn temp2 (result a1))
+
+(conn temp2 (in1 a2))
+(conn s (in2 a2))
+(conn temp3 (result a2))
+
+(conn temp3 (in assign1))
+(conn t (out assign1))
+
+(conn me (in1 d1))
+(conn t (in2 d1))
+(conn temp4 (result d1))
+
+(conn temp4 (in assign2))
+(conn v (out assign2))
+
+(conn v (in assignOutput0))
+(conn output0 (out assignOutput0))
+
+(conn kg (in1 m3))
+(conn c1000 (in2 m3))
+(conn temp5 (result m3))
+
+(conn temp5 (in assign3))
+(conn g (out assign3))
+
+(conn g (in assignOutput1))
+(conn output1 (out assignOutput1))
