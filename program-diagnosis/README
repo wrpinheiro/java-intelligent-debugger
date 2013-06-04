@@ -1,24 +1,19 @@
-This module generates the source code for a Java Compiler based on Java Language Grammar 1.5
+This module defines all components used to represent a program in a Value Based Model
 
 Description
 ===========
 
-The SableCC (http://sablecc.org/) is used to generate the classes of the compiler based on
-a grammar of Java 1.5 language with a small change to include a new keyword iif. This 
-keyword is used to replace while and do/while statements in the AST with a sequence os nested
-iif's. This approach is used to make easier the construction of the Value Based Model need to
-perform the diagnosis.
-
-TODO: Make refs. to the previously cited concepts.
-
+TODO: write a description
 
 How to Build
 ============
 
-This project uses a Maven plugin for SableCC that makes easy to generate the compiler classes,
-the compilation and packing of all resources. To do this, just use:
 
-  'mvn package' or 'mvn install'
+just use 'mvn package' or 'mvn install'
 
-This project only depends on SableCC libraries to generated the source.
+Testing
+=======
+
+Some tests were provided with this project in the src/test dir. There are also some failing tests
+that must be reviewed and moved to the test directory.
 
