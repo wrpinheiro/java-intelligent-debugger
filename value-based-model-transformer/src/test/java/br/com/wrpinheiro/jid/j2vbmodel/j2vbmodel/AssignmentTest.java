@@ -1,4 +1,4 @@
-package jidebugger.j2vbmodel;
+package br.com.wrpinheiro.jid.j2vbmodel.j2vbmodel;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;

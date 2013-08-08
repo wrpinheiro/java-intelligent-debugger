@@ -1,4 +1,4 @@
-package jidebugger.j2vbmodel;
+package br.com.wrpinheiro.jid.j2vbmodel.j2vbmodel;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
