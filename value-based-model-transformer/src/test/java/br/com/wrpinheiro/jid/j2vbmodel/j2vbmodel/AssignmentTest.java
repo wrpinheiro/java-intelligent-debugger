@@ -8,6 +8,7 @@ import org.junit.Test;
 import br.com.wrpinheiro.jid.programdiagnosis.IntegerSystem;
 import br.com.wrpinheiro.jid.programdiagnosis.components.IntegerAssignment;
 import br.com.wrpinheiro.jid.programdiagnosis.connectors.IntegerConnection;
+import br.com.wrpinheiro.jid.programdiagnosis.programcomponents.MethodSystem;
 
 /**
  * @author wrp
@@ -20,17 +21,24 @@ public class AssignmentTest extends ProgramModelTest {
 	public void testP1Model() {
 		IntegerSystem system = getProgramModel("Assign1.java");
 
-		assertEquals(system.getNumberOfComponents(), 1);
+		assertEquals("resources/examples/Assign1.java", system.getName());
+		assertEquals(1, system.getNumberOfComponents());
+		
+		assertTrue(system.getComponent("C1") instanceof MethodSystem);
+		MethodSystem main = (MethodSystem) system.getComponent("C1");
+		assertEquals(1, main.getNumberOfComponents());
 
-		IntegerAssignment a0 = checkIntegerAssignment(system, "C0");
+		IntegerAssignment assignment = checkIntegerAssignment(main, "C2");
 
-		assertEquals(2, system.getNumberOfConnections());
+		assertEquals(4, system.getNumberOfConnections());
 
+	    IntegerConnection argIn = checkConnValues(system, "argIn0", 1);
 		IntegerConnection const5 = checkConnValues(system, "5", 1);
-		IntegerConnection connX = checkConnValues(system, "x0", 1);
+		IntegerConnection connX = checkConnValues(system, "x2", 1);
 
-		assertTrue(const5.getConnectedPorts().contains(a0.getIn()));
-		assertTrue(connX.getConnectedPorts().contains(a0.getOut()));
+		assertTrue(argIn.getConnectedPorts().contains(main.getInputPort("arg0")));
+		assertTrue(const5.getConnectedPorts().contains(assignment.getIn()));
+		assertTrue(connX.getConnectedPorts().contains(assignment.getOut()));
 	}
 
 	@Test

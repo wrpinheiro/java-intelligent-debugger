@@ -12,6 +12,7 @@ import br.com.wrpinheiro.jid.programdiagnosis.components.IntegerAdder;
 import br.com.wrpinheiro.jid.programdiagnosis.components.IntegerAssignment;
 import br.com.wrpinheiro.jid.programdiagnosis.components.IntegerComponent;
 import br.com.wrpinheiro.jid.programdiagnosis.components.IntegerMultiplier;
+import br.com.wrpinheiro.jid.programdiagnosis.components.abstractions.AbstractComponent;
 import br.com.wrpinheiro.jid.programdiagnosis.connectors.IntegerConnection;
 
 /**
@@ -42,9 +43,9 @@ public class ProgramModelTest {
 		return conn;
 	}
 	
-	protected IntegerAssignment checkIntegerAssignment(IntegerSystem system,
+	protected IntegerAssignment checkIntegerAssignment(AbstractComponent abstractComponent,
 			String name) {
-		IntegerComponent c0 = system.getComponent(name);
+		IntegerComponent c0 = abstractComponent.getComponent(name);
 		assertNotNull(c0);
 		assertTrue(c0 instanceof IntegerAssignment);
 		IntegerAssignment a0 = (IntegerAssignment) c0;
