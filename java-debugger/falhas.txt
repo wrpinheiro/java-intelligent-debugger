@@ -1,0 +1,32 @@
+id #ocorrencias                  descrição
+      2          Pediu para entrar com o número de algarismos.
+      5          Não inicializou alguma variável.
+      4          Não faz a verificação para atualizar o máximo de algarismos.
+      3          Inverteu a atribuição do contador de tam. máx da seq.
+      2          Não soube montar a condição do laço.
+      3          Montou a condição do laço utilizando o resto da divisão do número lido.
+      1          Não soube verificar a condição inicial para garantir que o programa
+                 funcione caso ele tenha somente um dígito.
+      1          Não atualiza o contador do laço (loop infinito)
+      1          atualiza o valor de uma var. que deveria ser posteriormente utilizado.
+      1          atribui sucessivamente diferentes valores para uma mesma var.
+                 (p. ex.: p = p * 10; p = p / 10; p = n;)
+      4          atribui um valor errado ao contador de dígitos iguais quando
+                 este precisa ser reiniciado (p. ex.: cont = 0 ao invés de cont = 1). 
+      1          Colocou a impressão dentro do laço.
+      1          Contou no máximo 2 seq. de algarismos do número
+      2          Não contou o max. (vár. nem foi declarada/usada).
+      1          Não sabe como fazer para reiniciar a contagem de uma nova
+                 subseqüência.
+      3          Atualizou o valor da var. de contagem de subseq. em lugar incorreto.
+      1          Tenta fazer a verificação usando somente a var. de entrada.
+      1          Devolve o resultado somente da última comparação
+      
+
+
+- muitos utilizaram 2 ou 3 variáveis como contadores de subseq. e deixaram para 
+  fazer a verificação do maior somente no final.
+- alguns não identificaram que poderiam descascar o número e usaram potências de 10
+  para controlar a contagem de dígitos.
+- alguns fizeram a contagem de dígitos em um laço e depois utilizaram essa informação em outro
+  laço para fazer a verificação.

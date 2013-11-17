@@ -1,0 +1,12 @@
+# main definitions.
+name=Max Digitos Seq Test Suite
+resourceName=./programs/MenorQue10.java
+
+method=menorQue10
+testCases=tc1
+
+# test case definitions.
+tc1.expected={{6, 5}}
+tc1.properties=argIn0, argOut
+tc1.argIn0=1
+tc1.argOut=0

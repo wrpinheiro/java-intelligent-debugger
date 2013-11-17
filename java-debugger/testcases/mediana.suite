@@ -1,0 +1,21 @@
+# main definitions.
+name=Mediana Test Suite
+resourceName=./programs/Mediana.java
+testCases=tc1
+
+# associate the class/methods with the test cases. 
+method=main
+
+# test case definitions.
+tc1.expected={{6}, {4}, {5}, {9, 11, 10, 13, 14, 19, 18, 22, 21}}
+tc1.properties=input0, input1, input2, output0
+tc1.input0=6
+tc1.input1=4
+tc1.input2=10
+tc1.output0=6
+
+tc2.properties=input0, input1, input2, output0
+tc2.input0=1
+tc2.input1=2
+tc2.input2=3
+tc2.output0=2

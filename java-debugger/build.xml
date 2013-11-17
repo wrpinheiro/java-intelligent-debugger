@@ -1,0 +1,40 @@
+<project name="java-debugger" default="all" basedir="./">
+	<property file="../java-debugger-builder/build.properties" />
+
+	<property name="jar.name" value="../java-debugger-builder/repository/java-debugger.jar" />
+	<property name="bin.dir" value="bin" />
+	<property name="src.dir" value="src" />
+
+	<path id="project.build.classpath">
+		<pathelement location="../java-debugger-builder/repository/jGraphLib.jar" />
+		<pathelement location="../java-debugger-builder/repository/program-diagnosis.jar" />
+		<pathelement location="../java-debugger-builder/repository/j2vbmodel.jar" />
+		<pathelement location="lib/log4j-1.2.15.jar" />
+	</path>
+
+	<target name="all" depends="clean, compile, dist" />
+
+	<target name="-init">
+		<mkdir dir="${bin.dir}" />
+	</target>
+
+	<target name="clean">
+		<delete file="${jar.name}" />
+		<delete failonerror="false" dir="${bin.dir}" />
+	</target>
+
+	<target name="compile" depends="-init">
+		<javac srcdir="${src.dir}" destdir="${bin.dir}" classpathref="project.build.classpath" 
+			debug="${debug}" encoding="${encoding}" source="1.6" target="1.6"/>
+	</target>
+
+	<target name="dist">
+		<jar destfile="${jar.name}" basedir="${bin.dir}">
+			<manifest>
+				<attribute name="Main-Class" value="br.usp.ime.javadebugger.config.Start" />
+				<attribute name="Class-Path"
+					value="j2vbmodel.jar java-compiler.jar jGraphLib.jar log4j-1.2.15.jar program-diagnosis.jar" />
+			</manifest>
+		</jar>
+	</target>
+</project>

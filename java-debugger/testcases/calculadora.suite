@@ -1,0 +1,31 @@
+# main definitions.
+name=Calculadora Test Suite
+resourceName=./programs/Calculadora.java
+
+#method=soma
+#testCases=tc1
+
+#method=mult
+#testCases=tc2
+
+method=subtracao
+testCases=tc3
+
+# test case definitions.
+tc1.expected={{7}, {6}, {4}, {5, 9}}
+tc1.properties=argIn0, argIn1, argOut
+tc1.argIn0=7
+tc1.argIn1=2
+tc1.argOut=8
+
+tc2.expected={{7}, {6}, {4}, {5, 9}}
+tc2.properties=argIn0, argIn1, argOut
+tc2.argIn0=7
+tc2.argIn1=6
+tc2.argOut=41
+
+tc3.expected={{8}, {12}, {20}}
+tc3.properties=argIn0, argIn1, argOut
+tc3.argIn0=12
+tc3.argIn1=7
+tc3.argOut=5

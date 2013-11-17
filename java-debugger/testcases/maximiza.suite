@@ -1,0 +1,15 @@
+# main definitions.
+name=Plindromes Test Suite
+resourceName=./programs/Maximiza.java
+
+method=max
+testCases=tc1
+
+# test case definitions.
+tc1.expected={{19}, {31, 22, 30, 23, 24, 27, 28, 26, 25}}
+tc1.properties=argIn0, argIn1, output0, output1, output2
+tc1.argIn0=2
+tc1.argIn1=3
+tc1.output0=5
+tc1.output1=1
+tc1.output2=3

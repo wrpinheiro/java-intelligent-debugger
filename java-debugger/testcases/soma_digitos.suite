@@ -1,0 +1,29 @@
+# main definitions.
+name=Soma Digitos Test Suite
+resourceName=./programs/SomaDigitos.java
+
+# associate the class/methods with the test cases. 
+method=soma
+testCases=tc2
+
+#method=main
+#testCases=tc1
+
+#method=soma1
+#testCases=tc3
+
+# test case definitions.
+tc1.expected={{3}, {4}, {6}, {7}, {8}}
+tc1.properties=input0, output0
+tc1.input0=12345678
+tc1.output0=36
+
+tc2.expected={{4}, {6, 7, 8, 9}}
+tc2.properties=argIn0, argOut
+tc2.argIn0=12345
+tc2.argOut=15
+
+tc3.expected={{6}, {7}, {5}, {3}}
+tc3.properties=argIn0, output0
+tc3.argIn0=1
+tc3.output0=1

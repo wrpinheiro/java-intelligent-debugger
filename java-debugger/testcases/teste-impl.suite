@@ -1,0 +1,14 @@
+# main definitions.
+name=Max Test Suite
+resourceName=./programs/TesteImpl.java
+testCases=tc1
+
+# associate the class/methods with the test cases. 
+method=main
+
+# test case definitions.
+tc1.properties=x6,output0
+tc1.x6=20
+tc1.output0=2
+
+tc1.expected={{3},{4}}

@@ -1,0 +1,15 @@
+# main definitions.
+name=Fatores Primos Test Suite
+resourceName=./programs/Perfeito.java
+
+method=verificaPerfeito
+testCases=tc1
+
+# test case definitions.
+tc1.expected={{18}, {23, 20, 22, 21}, {25, 26, 27}}
+tc1.properties=argIn0, argOut
+#, soma2, aux5
+tc1.argIn0=6
+tc1.argOut=1
+tc1.soma2=0
+tc1.aux5=1

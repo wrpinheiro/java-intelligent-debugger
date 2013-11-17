@@ -1,0 +1,12 @@
+# main definitions.
+name=Plindromes Test Suite
+resourceName=./programs/Palindromes.java
+
+method=verificaPalindrome
+testCases=tc1
+
+# test case definitions.
+tc1.expected={}
+tc1.properties=argIn0, argOut
+tc1.argIn0=3445443
+tc1.argOut=1

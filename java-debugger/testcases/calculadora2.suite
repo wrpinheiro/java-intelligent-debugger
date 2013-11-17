@@ -1,0 +1,13 @@
+# main definitions.
+name=Calculadora Test Suite
+resourceName=./programs/Calculadora2.java
+
+method=main
+testCases=tc1
+
+# test case definitions.
+tc1.expected={{7}, {8}, {11}, {3}}
+tc1.properties=input0, input1, output0
+tc1.input0=7
+tc1.input1=1
+tc1.output0=9

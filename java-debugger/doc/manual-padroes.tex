@@ -1,0 +1,619 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage{graphicx,url}
+
+\usepackage[brazil]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{ae}
+\usepackage[latin1]{inputenc}
+\usepackage[usenames]{color}
+
+\setlength{\textheight}{20cm} 
+\setlength{\textwidth}{13.5cm}
+\setlength{\marginparwidth}{1cm}
+\setlength{\marginparsep}{8pt}
+\setlength{\oddsidemargin}{1.5cm}
+\setlength{\evensidemargin}{1.5cm}
+
+\setlength{\parindent}{0in}
+
+\begin{document}
+
+\newcommand{\jint}{\texttt{int} }
+\newcommand{\jif}{\texttt{if} }
+\newcommand{\jelse}{\texttt{else} }
+\newcommand{\jreturn}{\texttt{return} }
+
+\section{Introdução}
+
+\subsection{Terminologia}
+
+Definir os seguites termos:
+
+\begin{itemize}
+\item padrões elementares
+\item verificação de programas com casos de teste
+\item depuração de programas
+  \begin{itemize}
+  \item sessão de depuração de programas
+  \item sistema de depuração automática de programas (diagnóstico de programas)
+  \item discriminação de hipóteses
+  \item intenções
+  \item componentes abstratos
+  \end{itemize}
+\end{itemize}
+
+\section{Padrões Elementares}
+
+Os padrões elementares são soluções para problemas computacionais que ocorrem no
+cotidiano de aprendizes de programação. O objetivo desses padrões é permitir que
+o aprendiz de programação consiga responder questões como:
+
+\begin{itemize}
+\item Qual o problema que deve ser resolvido?
+\item Como esse problema pode ser resolvido?
+\item Qual é a melhor escolha em uma determinada situação?
+\item Como os vários elementos envolvidos na solução interagem?
+\end{itemize}
+
+Dessa forma, podemos considerar que os padrões elementares constituem uma forma
+do aluno aprender estratégias de resolução de problemas utilizando uma linguagem
+de programação.
+
+Um professor experiente pode definir um conjunto de padrões que ele considera
+interessante que seus alunos aprendam e fornece a seus alunos, o que chamamos de
+\textit{catálogo de padrões}. Um catálogo de padrões é um conjunto de padrões
+documentados e que podem ser utilizados por outras pessoas, nesse caso, os
+alunos. A comunidade envolvida com padrões possui algumas formas padronizadas
+para documentar os padrões, mas isso não é uma regra e pode ser feito de acordo
+com as necessidades ou o contexto.
+
+Você pode encontrar mais detalhes sobre padrões em geral e padrões elementares
+em: http://csis.pace.edu/~bergin/, no documento: \textit{Slides for a Patterns
+  Short Course}.
+
+No texto a seguir, apresentamos alguns padrão elementares que consideramos úteis
+para alguns problemas interessantes que os aprendizes de programação enfrentam.
+
+\subsection{Notação dos Padrõs Elementares}
+
+Nesse texto, definimos a nossa própria forma de documentar os padrões. Essa
+documentação é simples e objetiva para que os alunos possam encontrar
+rapidamente o que procuram e também para que possam compreender com facilidade o
+seu uso. Os seguintes itens compõem a nossa documentação dos padrões elementares:
+
+\begin{itemize}
+\item \textit{Objetivo}: descreve de forma sucinta a função principal do padrão
+  elementar.
+\item \textit{Sintaxe}: mostra como o padrão é construído.
+\item \textit{Semântica}: mostra os detalhes do funcionamento do padrão.
+\item \textit{Exemplo de uso}: Apresenta um exemplo de uso do padrão, através da
+  construção de um programa que resolva um determinado problema.
+  \begin{itemize}
+  \item \textit{Apresentação do Problema}: descrição do problema.
+  \item \textit{Análise do Problema}: faz uma análise do problema e apresenta
+    uma estratégia para resolvê-lo. Também é apresentada uma simulação simples
+    usando a estratégia apresentada.
+  \item \textit{Solução para o Problema}: mostra o programa solução para o
+    problema.
+  \end{itemize}
+\end{itemize}
+
+\section{Catálogo de Padrões Elementares}
+
+\subsection{Repetição contada}
+
+\large{\textbf{Objetivo}}
+
+ Executar uma seqüência de ações por um número de vezes
+previamente conhecido. \\ 
+
+\large{\textbf{Sintaxe}}
+{\small
+\begin{verbatim}
+  for (<inicialização-controle>; <condição>; <atualização-controle>) {
+      <ações>
+  }
+\end{verbatim}
+}
+
+\large{\textbf{Semântica}} \\
+
+Para utilizar o padrão, deve haver uma variável de controle reponsável por
+contar o número de vezes que as <ações> são executadas
+(\textit{iterações}). Essa variável é chamada de \textit{variável de
+  controle}. Antes da primeira iteração, a variável de controle deve ser
+inicializada e em seguida, a <condição> é avaliada. Caso a <condição> seja
+verdadeira, então a iteração será executada. Essa <condição> deve envolver o
+valor da variável de controle. Após o término da iteração é feito a atualização
+do valor da variável de controle e a <condição> é novamente avaliada e executada
+a iteração caso a <condição> continue verdadeira. Esse processo é executado até
+que a condição se torne falsa, caso no qual o padrão de repetição contada é
+finalizado.
+
+\large{\textbf{Exemplo de uso}}
+
+\paragraph{Problema da nota mais alta}. Um professor gostaria de saber qual a
+nota de prova mais alta entre os alunos da sua turma. Para ajudá-lo nessa
+tarefa, será necessário construir um programa para encontrar essa nota mais alta
+em uma turma. O programa deverá receber como entrada um número inteiro $n$ que
+representa a quantidade de alunos da turma, seguido de $n$ inteiros que
+representam a nota de cada um dos alunos. Após a execução, o programa deve
+devolver a nota mais alta da turma (observe que vários alunos podem ter tirado
+a mesma nota, inclusive essa nota mais alta).
+
+% permita ao professor inserir as notas
+% do aluno e ao final, o programa deverá devolver qual a nota mais alta. 
+
+\paragraph{Análise do problema}
+
+Para compreendermos melhor o problema, vamos fazer uma simulação da forma como
+um professor faria, caso ele quisesse descobrir qual a nota mais alta de uma
+turma e não tivesse um programa a sua disposição, somente uma pilha de provas
+corrigidas. Vamos fazer essa simulação para uma turma de exemplo contendo $5$
+alunos, a suas notas de provas foram:
+
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|c|}
+    \hline
+    \textbf{\#Aluno} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5}
+    \\
+    \hline
+    \textbf{Nota}  & 6          & 2          & 6          & 8          &  7 \\
+    \hline
+  \end{tabular}
+\end{center}
+
+Ao verificar a nota do primeiro aluno, o professor assume que essa é a maior
+nota até o momento (isso porque nenhuma nota foi vista anteriormente). O
+professor então verifica a nota do aluno 2 (nota $2$) e, mentalmente, compara
+com a maior nota vista até o momento, que é a nota $6$. Assim, ele reconhece que
+a maior nota ainda é a nota $6$. Ao ver a nota do aluno 3 (nota $6$) o professor
+repara que é igual à maior nota até o momento e simplesmente passa para a
+próxima nota. O professor verifica que a nota do aluno 4 é $8$, e como $8 > 6$,
+então a maior nota passa a ser $8$. O valor da última nota é $7$, mas como a
+maior nota vista é $8$, o professor ainda mantém essa nota como sendo a
+maior. Como não há mais notas para serem verificadas, o professor conclui que a
+maior nota da turma é $8$.
+
+Um programa que resolve o \textit{Prolema da nota mais alta}, deve, de certa
+forma, simular essa estratégia usada na simulação. Para tanto, vamos explorar os
+detalhes do problema.
+
+Em primeiro lugar, observe que o número de alunos da turma é informado. Dessa
+forma, também sabemos quantas serão as notas. Seguinte a estratégia usada pelo
+professor, ele verificou cada uma das notas e comparou com a maior nota ele
+tinha visto até o momento. Se a nota que ele está verificando em um determinado
+momento (vamos chamá-la de nota atual) for maior que a maior nota já vista,
+então essa nota atual deve ser considerada como sendo a maior já vista. Caso
+contrário, aquela considerada como sendo a maior nota vista, continuará sendo a
+maior. Esse tipo de comportamento pode ser escrito em um programa utilizando o
+padrão de Repetição Contada. No início do programa é feita a leitura do inteiro
+$n$, representando os alunos da turma e, em seguida, é executado o laço do
+padrão para ler cada uma das notas. Para cada nota lida, deve ser verificado se
+ela é maior do que a maior nota já lida até o momento. Note que para fazer esse
+processo o programa precisa armazenar somente a maior nota que foi lida, para
+que possa ser comparada com a última nota lida. Se a última nota lida é maior
+que a maior nota até esse momento, então essa última é deve ser considerada a
+maior nota. Caso contrário aquela que era a maior nota ainda continuará sendo a
+maior. Observe que é necessário fazer um tratamento especial para o caso da
+primeira nota lida, na qual ainda não existe essa maior nota para fazer a
+comparação. Nesse caso, podemos assumir que a maior nota até o momento tem o
+valor $0$. Como não são consideradas notas menores que $0$, é garantido que a
+maior nota será pelo menos a própria nota $0$ (situação em que toda a turma
+tirou $0$ na prova).
+
+Apresentamos a seguir um programa que resolve esse problema.
+
+\paragraph{Solução para o Problema da nota mais alta}.
+
+{\small
+\begin{verbatim}
+01  public static void main(String[] args) {
+02    int i;     /* contador para o número de alunos */
+03    int n;     /* armazena o número de alunos */
+04    int maior; /* armazena a maior nota vista até o momento */
+05    int atual; /* armazena a nota do i-ésimo aluno */
+
+06    maior = 0;
+07    n = readInt();
+
+08    for (i = 0; i < n; i = i + 1) {
+09      atual = readInt();
+10      if (atual > maior)
+11        maior = atual;
+12    }
+
+13    writeInt("A maior nota e'", maior);
+14  }
+\end{verbatim}
+}
+
+\subsection{Repetição com Sentinela}
+
+\large{\textbf{Objetivo}}
+
+Executar uma seqüência de ações por um número indeterminado de vezes até que
+seja informado um valor especial indicando não há mais valores para serem processados. \\
+
+\large{\textbf{Sintaxe}}
+{\small
+\begin{verbatim}
+  ler um valor para <varDado>
+  while(<vardDado> != <sentinela>) {
+    <ações>
+    ler um novo valor para <varDado>
+  }
+\end{verbatim}
+}
+\large{\textbf{Semântica}}
+
+Para utilizar o padrão, deve haver uma variável no qual terá
+seu valor atualizado a cada iteração do laço. O valor dessa variável é sempre
+testado em relação a um valor esperado, chamado de sentinela e representado por
+<sentinela>. O sentinela é um valor inválido que não deve ser processado, mas
+serve como um indicador para informar que os valores que deveriam ser fornecidos
+como entrada terminaram. Antes da primeira iteração, o valor de <varDado> é lido
+e essa valor é comparado com o valor de <sentinela> no teste de condição do
+laço. No caso dos valores serem iguais, o laço é finalizado e o programa segue
+sua execução após o final de bloco do laço. Caso contrário, as ações no bloco do
+laço são executadas. Entre as ações executadas no laço está uma ação de leitura
+do valor de <varDados> (geralmente a última ação) que servirá para o teste de
+condição e possível execução da próxima iteração do laço.
+
+\vspace{.5cm}
+
+\large{\textbf{Exemplo de uso}} \\
+
+\paragraph{Problema do dado}. Uma pessoa gostaria saber a soma total obtida numa
+seqüência de lançamento de dados, e também o número de vezes que cada valor foi
+obtido no lançamento. Para auxiliar essa pessoa, você deve construir programa
+que recebe como entrada essa seqüência de valores obtidos nos lançamentos dos
+dados e devolver a soma total obtida nos lançamentos e o número de vezes que
+cada face do dado foi obtida. Observe que valores válidos na entrada são números
+naturais entre $1$ e $6$. Como o número de lançamentos não é fornecido de
+antemão, o seu programa deverá finalizar o processamento quando o valor 0 for
+obtido como entrada.
+
+\paragraph{Análise do problema}
+
+Como o número de lançamentos do dado não é fornecido, devemos resolver esse
+problema processando todos número naturais obtidos na entrada, que sejam entre
+$1$ e $6$, e finalizando o programa quando o número obtido for 0. O
+processamento será feito somando-se o valor obtido em uma variável de soma geral 
+e para cada valor obtido na entrada, devemos somar uma unidade em um variável
+que representa a quantidade de vezes que aquela face foi obtida no lançamento do
+dado. Como temos 6 possibilidades de faces, devem ser criadas 6 variáveis para
+armazenar o total de vezes que cada face foi obtida. Vamos fazer simulação para
+a seguinte seqüência de lançamentos do dados:
+
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|c|c|}
+    \hline
+    \textbf{Número do Lançamento}  & 1 & 2 & 3 & 4 & 5 & \\
+    \hline
+    \textbf{Face obtida no lançamento} & 3 & 5 & 1 & 5 & 4 & 0 \\
+    \hline
+\end{tabular}
+\end{center}
+
+Suponha que antes de fazer a primeira leitura, a soma dos valores obtidos até o
+momento é zero, e também contamos zero vezes o número que cada face do dado foi
+obtida. Na primeira entrada (referente ao valor obtido no primeiro lançamento do
+dado) obtemos o valor 3, que é então adicionado ao valor anterior da soma total,
+que é zero, obtendo o valor 3. No contador de número de vezes que a face 3
+apareceu devemos somar 1, obtendo 1. O valor obtido na segunda entrada é 5, e
+nesse caso, a soma total passa a ser 5 + 3 = 8, e devemos somar 1 no número de
+vezes que a face 5 apareceu, totalizando 1. Ao fazer a terceira entrada, obtemos
+o valor 1 e a soma total passa a ser 8 + 1 = 9 e devemos somar 1 no contador de
+vezes que a face 1 saiu, totalizando 1. Na quarta leitura, obtemos o valor 5,
+que adicionado ao valor atual da soma é 9 + 5 = 14, e como já obtivemos o valor
+5 anteriormente, ao incrementarmos o contador para essa face, chegamos ao valor
+de 2. O próximo valor obtido é  4, que deve ser adcionado à soma geral, que
+nesse caso fica como 14+4=18 e o contador do número de vezes que a face 4 saiu é
+incrementada de uma unidade. Na entrada seguinte, obtemos o valor 0 que é
+exatamente o valor que esperamos como sentinela para finalizar o laço. Então, o
+laço é finalizado e apresentamos na saída os valores da soma total e o número de
+vezes que cada face do dado foi obtido. Nesse caso, temos como saída:
+
+\textbf{Soma total obtida:} 18 \\
+\textbf{Num. de vezes que a face 1 foi obtida: } 1 \\
+\textbf{Num. de vezes que a face 2 foi obtida: } 2 \\
+\textbf{Num. de vezes que a face 3 foi obtida: } 3 \\
+\textbf{Num. de vezes que a face 4 foi obtida: } 4 \\
+\textbf{Num. de vezes que a face 5 foi obtida: } 5 \\
+\textbf{Num. de vezes que a face 6 foi obtida: } 6 \\
+
+Esse comportamento apresentado pode ser obtido com o uso do padrão elementar de
+Repetição com Sentinela, que deve executar o cálculo para a geração da soma
+total e também o incremente do valor de cada variável que representa o número de
+vezes que face foi obtida. Os cálculos citados devem ser repetivos até que seja
+obtido o valor 0 como entrada, que é o sentinela esperado nesse programa.
+
+\paragraph{Solução para o Problema do dados}.
+{\small
+\begin{verbatim}
+01  public static void main(String[] args) {
+02    int soma;  /* armazena a soma total dos lancamentos */
+03    int lcto;  /* ultimo valor de lancamento lido */
+04    int f1;    /* numero de vezes que foi obtida a face 1 num lancamento */
+05    int f2;    /* numero de vezes que foi obtida a face 2 num lancamento */
+06    int f3;    /* numero de vezes que foi obtida a face 3 num lancamento */
+07    int f4;    /* numero de vezes que foi obtida a face 4 num lancamento */
+08    int f5;    /* numero de vezes que foi obtida a face 5 num lancamento */
+09    int f6;    /* numero de vezes que foi obtida a face 6 num lancamento */
+
+10    soma = 0;
+11    f1 = 0;
+12    f2 = 0;
+13    f3 = 0;
+14    f4 = 0;
+15    f5 = 0;
+16    f6 = 0;
+
+17    lcto = readInt();
+
+18    while (lcto != 0) {
+19      soma = soma + lcto;
+
+20      if (lcto == 1)
+21        f1 = f1 + 1;
+22      else if (lcto == 2)
+23        f2 = f2 + 1;
+24      else if (lcto == 3)
+25        f3 = f3 + 1;
+26      else if (lcto == 4)
+27        f4 = f4 + 1;
+28      else if (lcto == 5)
+29        f5 = f5 + 1;
+30      else if (lcto == 6)
+31        f6 = f6 + 1;
+
+32      lcto = readInt();
+33    }
+
+34    writeInt("Soma total obtida:", soma);
+35    writeInt("Num. de vezes que a face 1 foi obtida: ", f1);
+36    writeInt("Num. de vezes que a face 2 foi obtida: ", f2);
+37    writeInt("Num. de vezes que a face 3 foi obtida: ", f3);
+38    writeInt("Num. de vezes que a face 4 foi obtida: ", f4);
+39    writeInt("Num. de vezes que a face 5 foi obtida: ", f5);
+40    writeInt("Num. de vezes que a face 6 foi obtida: ", f6);
+
+41  }
+\end{verbatim}
+}
+No programa solução apresentado, note que foi utilizada o padrão elementar de
+Seleção Sequencial (entre as linhas 20 e 31) para escolher a variável que será
+incrementada, representando a face obtida no lançamento do dado.
+
+\section{Plugin de Depuração de Programas para o Dr. Java}
+
+\subsection{descrição da tela do sistema de depuração}
+
+descrever o visualizador do programa, visualizao do caso de teste usado para
+fazer a depuração, as hipóteses de falha e as predições do aluno. 
+
+\subsection{exemplo de uma sessão de depuração}
+
+\end{document}
+
+% \subsection{Resolução de problemas}
+
+% \textbf{O problema da tortas}. Para comemorar os 200 anos de fundação da cidade
+% de Corridolândia, o prefeito organizou uma competição com o objetivo de
+% encontrar o maior comedor de tortas da cidade. A tarefa de cada competidor é
+% muito simples, basta pegar uma torta da pilha de tortas e devorá-la. Para
+% participar da competição, cada competidor deve fazer sua inscrição até o horário
+% de início da competição. Após a contagem do número de tortas que cada competidor
+% comeu, devemos encontrar o vencedor da competição. Caso haja empate, o
+% participante que se inscreveu antes (aquele com o menor número de inscrição)
+% será o vencedor.
+
+% A sua tarefa é contruir um programa que receba como entrada: o número total de
+% participantes e a quantidade de tortas que cada participante comeu e calcular o
+% vencedor, mostrando o seu número de inscrição e a quantidade de tortas que ele
+% comeu. As entradas referentes ao número de tortas comidas por um compentidor
+% serão feitas de acordo com a ordem de inscrição, ou seja, a primeira entrada é
+% referente à inscrição de número 1, a segunda entrada é referente à inscrição de
+% número 2, e assim por diante. Caso uma pessoa tenha se inscrito mas não
+% comparecido, esse aparecerá na entrada com o número de tortas comidas igual a
+% zero.
+
+% Façamos uma breve análise do programa. Para termos uma intuição da solução,
+% vamos pensar, inicialmente, em um número fixo de 3 competidores, como por
+% exemplo, sendo A, B e C o número de tortas que cada competidor comeu, e o número
+% de inscrição de A é 1, de B é 2 e de C é 3. Podemos encontrar o maior desse três
+% números sempre verificando um deles com os outros dois. O fluxograma abaixo
+% apresenta uma possível solução para o problema:
+
+% %\begin{figure}
+% %  \centering
+%   \includegraphics[scale=.7]{images/fchart-maior3}
+% %\end{figure}
+
+% Esse mesmo fluxograma pode ser traduzido no seguinte trecho de código na
+% linguagem Java:
+
+% \begin{verbatim}
+%   if (A >= B) {
+%     if (A >= C) {
+%       System.out.println(A);
+%     } else {
+%       System.out.println(C);
+%     }
+%   } else {
+%     if (B >= C) {
+%       System.out.println(B);
+%     } else {
+%       System.out.println(C);
+%     }
+%   }
+% \end{verbatim}
+
+% Observe que mesmo com esse exemplo utilizando 3 valores diferentes e forma como
+% temos que encadear as estruturas do tipo \textit{if-then-else} começa a ficar
+% complexa. No caso do nosso problema, o número de entradas não está disponível
+% durante a construção do programa, então, devemos abordar esse problema de uma
+% forma diferente, na qual ao \textit{invés de compararmos todos os valores de
+%   entrada entre eles mesmos, podemos simplesmente comparar cada nova entrada com
+%   o maior valor visto até o momento}. Essa estratégia pode ser representada da
+% com o seguinte fluxograma:
+
+% %\begin{figure}
+% %  \centering
+%   \includegraphics[scale=.7]{images/fchart-maiorN-ideia}
+% %\end{figure}
+
+% Tendo uma idéia de como resolver o problema, ainda temos uma questão em aberto:
+% quando o nosso algoritmo deve parar de processar as novas entradas? Note que o
+% número de participantes, n, é fornecido como sendo a primeira entrada para o
+% programa. Suponha que n = 10, então teríamos que verificar, para cada valor
+% atual, se ele é maior que o maior valor visto até o momento. No final, teríamos
+% feito 9 comparações, ou seja, os 3 blocos apresentados na última figura seriam
+% executados 9 vezes. Mas precisamos ter um pouco de cuidado nesse momento, pois
+% perceba que para o primeiro valor lido, não existe um valor anterior. Dessa
+% forma, devemos ``mascarar'' esse dado em nosso programa, assumindo que o maior
+% valor lido até o momento, antes de fazer a primeira leitura, é 0! Dessa forma,
+% qualquer valor lido deve ser maior (visto que ninguém pode comer -2
+% tortas). Então, no total devem ser feitas 10 comparações, que é o valor
+% fornecido para $n$.
+
+% TODO: colocar a solução do problema na forma de fluxograma.
+
+
+% \subsection{Seleção Alternativa}
+% \label{sec:selecaoalternativa}
+
+
+% \textbf{Objetivo:} Permitir que seja executado um dentre dois possíveis
+% conjuntos de ações, de acordo com uma condição testável.
+
+% \textbf{Sintaxe:}
+
+% \begin{tabular}{ll}
+% \hspace{2cm} & \texttt{if} (<condição>)  \\
+% \hspace{2cm} & \quad <ações-1>   \\
+% \hspace{2cm} & \texttt{else} \\
+% \hspace{2cm} & \quad <ações-2>   \\
+% \end{tabular}
+
+
+% \textbf{Semântica:} Existem exatamente dois conjuntos de ações que podem ser
+% executados: <ações-1> e <ações-2>. A <condição> deve ser uma condição lógica que
+% quando avaliada devolve \textit{verdadeiro} ou \textit{falso}. Caso a
+% <condição> seja avaliada como \textit{verdadeira}, a seqüência <ações-1> será
+% executada, caso contrário, a seqüência de <ações-2> será executada.
+
+
+% \textbf{Programa de Exemplo:} Verificar se um número inteiro $n$ é par ou não. O
+% resultado da verificação deve ser armazenado em uma variável $resultado$. Se $n$
+% é par, então o valor na variável $resultado$ deverá ser $1$, caso contrário, o
+% valor armazenado na variável $resultado$ deverá ser $0$.
+
+% \begin{tabular}{lll}
+% \hspace{2cm} & 1 & \quad \texttt{if} (n \% 2 == 0) \\
+% \hspace{2cm} & 2 & \quad\quad $resultado = 1$; \\
+% \hspace{2cm} & 3 & \quad \texttt{else} \\
+% \hspace{2cm} & 4 & \quad\quad $resultado = 0$; \\
+% \end{tabular}
+
+
+% \textbf{Informações para auxiliar na depuração}
+
+% Quando se deseja verificar possíveis falhas na implementação do padrão de
+% Seleção Alternativa, o aluno pode:
+
+% \begin{itemize}
+% \item verificar os valores esperados para as varíaveis usada e modificadas no
+%   padrão de Seleção Alternativa, imediatamente antes de ser execuda a linha que
+%   contém a <condição> e imediatamente após a última linha do padrão. O aluno
+%   deve ser capaz de predizer os valores (valores que ele espera que as
+%   variáveis tenham em um determinado ponto do programa) para as variáveis que
+%   são usadas na <condição> e também predizer os valores para as variáveis
+%   modificadas após a execução do padrão.
+% \item verificar se a <condição> está com falha ou não. Para fazer essa
+%   verificação, o aluno deve predizer os valores para as variáveis da <condição>
+%   e o resultado esperado na execução dessa mesma <condição>. Por exemplo,
+%   suponha que a <condição> do Programa de Exemplo citado fosse: n \% 2 != 0, e o
+%   aluno ainda quisesse tratar números pares na linha 2. Certamente, isso
+%   causaria uma falha no programa. Ao fazer a verificação, o aluno sabe, pelo uso
+%   de um caso de teste, por exemplo, que n é um número par e ainda que a
+%   avaliação da expressão deve ser \textit{verdadeira}. Confrontando essas duas
+%   informações e o resultado da execução do programa, o aluno poderá verificar
+%   que a condição está sendo avaliada como \textit{falso}, o que leva ao erro no
+%   programa. Dessa forma, o aluno deve reconhecer que o problema está na
+%   <condição>.
+% \item verificar se <ações-1> e <ações-2> estão invertidas. Nesse caso, o aluno
+%   pode verificar com casos de testes diferentes, observando os valores das
+%   varíaveis que são modificadas em <ações-1> e <ações-2>.
+% \end{itemize}
+
+% \section{Exemplo de Depuração de Programas}
+
+% \textit{Problema do prêmio}: Construir um método chamado ``calculaPremio'' que
+% recebe como entrada um inteiro $1$ ou $2$ representando a posição de um premiado
+% e outro inteiro, representando um prêmio inicial, e devolve o prêmio final,
+% calculado da seguinte forma:
+% \begin{itemize}
+% \item\label{premio:it1} se o premiado estiver em segundo lugar, o prêmio final
+%   deve ser o valor do prêmio inicial acrescido de $5\%$;
+% \item\label{premio:it2} se o premiado estiver em primeiro lugar, o prêmio final
+%   deve ser o valor do prêmio inicial acrescido de $12\%$ mais um bônus de $50$
+%   reais.
+% \end{itemize}
+
+% Nesse problema, um aluno identificou que os conjuntos de ações descritas nos
+% Itens~\ref{premio:it1}~e~\ref{premio:it2} são executados conforme a avaliação de
+% duas condições complementares. Dessa forma, o aluno optou por utilizar o padrão
+% de Seleção Alternativa, e ele construiu o seguinte programa para resolver o
+% problema do prêmio:
+
+% \begin{tabular}{lll}
+% \hspace{2cm} & 1 & \jint calculaPremio(\jint premiado, \jint premio) $\{$ \\
+% \hspace{2cm} & 2 & \quad \jint premioFinal; \\
+% \hspace{2cm} & 3 & \quad \jif (premiado $==$ 1) \\
+% \hspace{2cm} & 4 & \quad\quad premioFinal $=$ premio $*$ 12 $*$ premio $/$ 100 $+$ 50; \\
+% \hspace{2cm} & 5 & \quad \jelse \\
+% \hspace{2cm} & 6 & \quad\quad premioFinal $=$ premio $*$ 7 $*$ premio $/$ 100; \\
+% \hspace{2cm} & 7 & \quad \jreturn premioFinal; \\
+% \hspace{2cm} & 8 & $\}$
+% \end{tabular}
+
+% Ao apresentar esse programa para um professor, o professor olha e rapidamente
+% pensa no seguinte caso de teste para verificar o programa:
+
+% \begin{center}
+% \begin{tabular}{|c|c|c|}
+% \hline
+% \textbf{premiado} & \textbf{premio} & \textbf{calculaPremio(1, 100)} \\
+% \hline
+% 1 & 100 & 162 \\
+% \hline
+% \end{tabular}
+% \end{center}
+
+% O professor informa ao aluno os dados do caso de teste e verifica o programa,
+% constatando as falhas. Para motivar o aluno a reconhecer as suas próprias
+% falhas, o professor sugere que o aluno verifique sua implementação do padrão de
+% Seleção Alternativa. Implicitamente, o professor está indicando que a falha pode
+% estar entre as linhas 3 e 6. que representaremos como [3-6].
+
+% Como o aluno poderia verificar a falha nesse padrão? Uma forma seria predizer os
+% valores para a variável ``premiado'' imediatamente antes da linha 3 ser
+% executada e para a variável ``premioFinal'' após a linha 6 ser
+% executada. Utilizando o caso de teste informado pelo professor, o aluno chega a
+% conclusão que o valor da variável ``premiado'', antes de executar a linha 3,
+% deve ser 1 e que o valor da variável ``premioFinal'' deve ser 162. Mas ele
+% também repara que o valor da variável ``premioFinal'' é o valor devolvido pelo
+% programa, porém, como o caso de teste do professor foi usado para verificar a
+% falha, o aluno conclui que o problema deve estar relacionado à variável
+% ``premioFinal''.
+
+% Ainda sem saber muitos detalhes sobre a falha do programa, o aluno recorre
+% novamente ao professor para pedir auxílio. O professor novamente, ainda sem
+% querer apontar a falha exata no programa, sugere que o aluno verifique no
+% programa a condição da linha 3 e a expressão na linha 4. Representaremos essa
+% informação dada pelo professor como: $Hip = \{\{3\}, \{4\}\}$.
+
+% Nesse caso, o aluno ...

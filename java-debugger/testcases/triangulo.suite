@@ -1,0 +1,15 @@
+# main definitions.
+name=Triangulo Test Suite
+resourceName=./programs/Triangulo.java
+testCases=tc1
+
+# associate the class/methods with the test cases. 
+method=main
+
+# test case definitions.
+tc1.expected={}
+tc1.properties=input0, input1, input2, output0
+tc1.input0=5
+tc1.input1=5
+tc1.input2=5
+tc1.output0=0

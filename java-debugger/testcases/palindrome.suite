@@ -1,0 +1,12 @@
+# main definitions.
+name=Fatores Primos Test Suite
+resourceName=./programs/Palindrome.java
+
+method=verificaPalindrome
+testCases=tc1
+
+# test case definitions.
+tc1.expected={{13}, {14}, {20, 17, 16, 19, 18}, {22, 23, 24}}
+tc1.properties=argIn0, argOut
+tc1.argIn0=3445443
+tc1.argOut=1

@@ -1,0 +1,14 @@
+# main definitions.
+name=Soma Números Suite
+resourceName=./programs/SomaNumeros.java
+
+# associate the class/methods with the test cases. 
+method=main
+
+testCases=tc1
+
+# test case definitions.
+tc1.properties=input0, output0
+tc1.input0=5
+tc1.output0=15
+tc1.expected={{6}, {7}, {0, 9, 10, 11}}

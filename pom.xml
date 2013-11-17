@@ -30,6 +30,7 @@
     <module>java-compiler</module>
     <module>program-diagnosis</module>
     <module>value-based-model-transformer</module>
+    <module>java-debugger</module>
   </modules>
 
   <build>

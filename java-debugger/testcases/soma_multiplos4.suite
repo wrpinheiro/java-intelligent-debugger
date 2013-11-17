@@ -1,0 +1,13 @@
+# main definitions.
+name=Soma Multiplos Test Suite
+resourceName=./programs/SomaMultiplos4.java
+testCases=tc1
+
+# associate the class/methods with the test cases. 
+method=main
+
+# test case definitions.
+tc1.expected={{6}, {8}, {9}, {10}, {15, 12, 13, 14}}
+tc1.properties=input0, output0
+tc1.input0=100
+tc1.output0=100

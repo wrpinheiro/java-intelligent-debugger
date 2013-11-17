@@ -1,0 +1,12 @@
+# main definitions.
+name=Max Digitos Seq Test Suite
+resourceName=./programs/MaxDigitosEmSequencia.java
+
+method=contaMaxDigEMSeq
+testCases=tc1
+
+# test case definitions.
+tc1.expected={{7}, {9}, {15}, {16}, {30, 19, 20, 23, 24, 26, 25, 28, 18, 21}}
+tc1.properties=argIn0, argOut
+tc1.argIn0=10
+tc1.argOut=1

@@ -1,0 +1,15 @@
+# main definitions.
+name=Max Test Suite
+resourceName=./programs/Max.java
+testCases=tc1
+
+# associate the class/methods with the test cases. 
+method=main
+
+# test case definitions.
+tc1.properties=input0, input1, output0
+#tc1.expected={{7}, {6}, {4}, {5, 9}}
+tc1.expected={{6,7,9}, {5}, {4}}
+tc1.input0=4
+tc1.input1=5
+tc1.output0=15

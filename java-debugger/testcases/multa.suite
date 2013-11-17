@@ -1,0 +1,45 @@
+# main definitions.
+name=Multa Test Suite
+resourceName=./programs/Multa.java
+testCases=tc1
+#, tc2, tc3, tc4
+
+# associate the class/methods with the test cases. 
+method=main
+
+# test case definitions.
+tc1.expected={{4},  {5}, {6}, {12, 13, 11}, {7}, {8, 9, 10}}
+
+#[SeleçãoSequencial:AlternativeSelection:L[12, 13, 11]] [C5:IntegerAssignment:L[7]] [SeleçãoSequencial:AlternativeSelection:L[8, 9, 10]] }
+#20:56:54,798 INFO  [IntegerProgramDiagnosisProblem] F
+
+#tc1.properties=input0, input1, input2, novoValor6, aux11, mora3, output0
+tc1.properties=input0, input1, input2, output0
+tc1.input0=1000
+tc1.input1=0
+tc1.input2=0
+tc1.novoValor6=975
+tc1.aux11=1
+tc1.mora3=0
+tc1.output0=970
+
+tc2.expected={{13}, {11}, {9}, {6}, {8}, {5}, {4}}
+tc2.properties=input0, input1, input2, output0
+tc2.input0=1000
+tc2.input1=1
+tc2.input2=0
+tc2.output0=1045
+
+tc3.expected={{11}, {12}, {6}, {8}, {5}, {10}, {4}}
+tc3.properties=input0, input1, input2, output0
+tc3.input0=1000
+tc3.input1=0
+tc3.input2=1
+tc3.output0=990
+
+tc4.expected={{11}, {12}, {9}, {6}, {8}, {5}, {4}}
+tc4.properties=input0, input1, input2, output0
+tc4.input0=1000
+tc4.input1=1
+tc4.input2=1
+tc4.output0=1065

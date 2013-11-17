@@ -1,0 +1,19 @@
+# main definitions.
+name=Calcula Premio Test Suite
+resourceName=./programs/CalculaPremio.java
+
+method=calculaPremio
+testCases=tc1
+
+# test case definitions.
+tc1.expected={{5, 6, 8}}
+tc1.properties=argIn0, argIn1, argOut
+tc1.argIn0=1
+tc1.argIn1=100
+tc1.argOut=162
+
+tc2.expected={{7}, {6}, {4}, {5, 9}}
+tc2.properties=argIn0, argIn1, argOut
+tc2.argIn0=2
+tc2.argIn1=100
+tc2.argOut=105

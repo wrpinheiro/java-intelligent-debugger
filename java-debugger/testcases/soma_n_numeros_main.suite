@@ -1,0 +1,20 @@
+# main definitions.
+name=Soma N Números Suite
+resourceName=./programs/SomaNNumeros.java
+
+# associate the class/methods with the test cases. 
+method=main
+
+testCases=tc1
+
+# test case definitions.
+tc1.properties=input0, input1, input2, output0
+tc1.input0=2
+tc1.input1=2
+tc1.input2=5
+tc1.output0=7
+tc1.expected={}
+
+tc2.properties=input0, output0
+tc2.input0=0
+tc2.output0=1

@@ -1,0 +1,23 @@
+# main definitions.
+name=Max Test Suite
+resourceName=./programs/NumeroSegmentos.java
+testCases=tc1
+
+# associate the class/methods with the test cases. 
+method=main
+
+# test case definitions.
+tc1.properties=input0, input1, input2, input3, input4, input5, input6, input7, input8, input9, input10, output0
+tc1.input0=10
+tc1.input1=5
+tc1.input2=2
+tc1.input3=2
+tc1.input4=3
+tc1.input5=4
+tc1.input6=4
+tc1.input7=4
+tc1.input8=4
+tc1.input9=1
+tc1.input10=1
+tc1.output0=5
+tc1.expected={}

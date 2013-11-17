@@ -3,6 +3,7 @@ package br.com.wrpinheiro.jid.j2vbmodel.j2vbmodel;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import br.com.wrpinheiro.jid.programdiagnosis.IntegerSystem;
@@ -16,6 +17,7 @@ import br.com.wrpinheiro.jid.programdiagnosis.connectors.IntegerConnection;
  * 
  *         22/11/2008
  */
+@Ignore
 public class ExpressionTest extends ProgramModelTest {
 	@Test
 	public void testAProgramThatSumsTwoNumbers() {
