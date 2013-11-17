@@ -1,4 +1,4 @@
-//package examples;
+package examples;
 
 /**
  * @author wrp
