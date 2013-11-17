@@ -31,6 +31,7 @@
     <module>program-diagnosis</module>
     <module>value-based-model-transformer</module>
     <module>java-debugger</module>
+    <module>jid</module>
   </modules>
 
   <build>
