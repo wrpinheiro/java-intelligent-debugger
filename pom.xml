@@ -32,9 +32,30 @@
     <module>value-based-model-transformer</module>
     <module>java-debugger</module>
     <module>jid</module>
+    <module>build-tools</module> 
   </modules>
 
   <build>
+
+   <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-checkstyle-plugin</artifactId>
+        <version>2.11</version>
+        <dependencies>
+          <dependency>
+            <groupId>br.com.wrpinheiro.jid</groupId>
+            <artifactId>build-tools</artifactId>
+            <version>1.0</version>
+          </dependency>
+        </dependencies>
+       <configuration>
+          <configLocation>config/maven_checks.xml</configLocation>
+          <headerLocation>jid/LICENSE.txt</headerLocation>
+        </configuration>
+      </plugin>
+   </plugins>
+
    <pluginManagement>
       <plugins>
         <plugin>
@@ -61,4 +82,20 @@
       </plugins>
     </pluginManagement>
   </build>
+
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-checkstyle-plugin</artifactId>
+        <version>2.11</version>
+        <configuration>
+          <configLocation>config/maven_checks.xml</configLocation>
+          <headerLocation>jid/LICENSE.txt</headerLocation>
+        </configuration>
+      </plugin>
+    </plugins>
+  </reporting>
+
 </project>
+
